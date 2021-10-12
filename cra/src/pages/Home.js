@@ -20,6 +20,6 @@ const links = [
 export const Home = () => <div>
     <h1>React Avancé</h1>
     <div className="list-group">
-        {links.map((link, index) => <Link className="list-group-item list-group-item-action" to={link.to}>{link.label}</Link>)}
+        {links.map((link, index) => <Link key={'link-' + index} className="list-group-item list-group-item-action" to={link.to}>{link.label}</Link>)}
     </div>
 </div>;
