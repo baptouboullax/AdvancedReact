@@ -2,6 +2,24 @@ import {
     Link
 } from "react-router-dom";
 
+const links = [
+    {
+        to: '/classvsfunctions',
+        label: 'Class vs Functions'
+    },
+    {
+        to: '/localization',
+        label: 'Localization'
+    },
+    {
+        to: '/http-requests',
+        label: 'HTTP Requests'
+    }
+]
+
 export const Home = () => <div>
-    <Link className="btn btn-link" to="/classvsfunctions">Class vs Functions</Link>
+    <h1>React Avancé</h1>
+    <div className="list-group">
+        {links.map((link, index) => <Link className="list-group-item list-group-item-action" to={link.to}>{link.label}</Link>)}
+    </div>
 </div>;
