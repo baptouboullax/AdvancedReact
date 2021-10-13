@@ -1,7 +1,10 @@
 import {
     Link
 } from "react-router-dom";
+import { observer } from 'mobx-react-lite';
+
 import Instance from '../instance';
+import Profile from '../pages/Observables/profile';
 
 const links = [
     {
@@ -30,9 +33,12 @@ const links = [
     }
 ]
 
+const UserCount = observer(() => <>{Profile.users.length} utilisateurs :)</>);
+
 export const Home = () => <div>
     <h1>{Instance.name}</h1>
     <div className="list-group">
         {links.map((link, index) => <Link key={'link-' + index} className="list-group-item list-group-item-action" to={link.to}>{link.label}</Link>)}
     </div>
+    <UserCount />
 </div>;
