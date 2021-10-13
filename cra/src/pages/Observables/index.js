@@ -2,8 +2,9 @@ import Profile from './profile';
 import { observer } from 'mobx-react-lite';
 
 
-const UserCard = ({ avatar, id, name }) => <div className="col-2">
-    <img className="img-fluid rounded" src={avatar} />
+const UserCard = ({ avatar, id, name }) => <div className="col-4 col-md-3 col-lg-2 col-xl-1 text-center">
+    <img className="img-fluid rounded w-100" src={avatar} alt={name} />
+    <p className="m-0">{name}</p>
 </div>;
 
 const UserList = observer(() => Profile.users.map((user, index) => {
