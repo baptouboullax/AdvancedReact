@@ -6,6 +6,7 @@ import { HttpRequests } from "./HttpRequests";
 import { UseRef } from "./UseRef";
 import { UseReducer } from "./UseReducer";
 import { Observables } from "./Observables";
+import { Redux } from "./Redux";
 
 export {
     Home,
@@ -15,5 +16,6 @@ export {
     HttpRequests,
     UseRef,
     UseReducer,
-    Observables
+    Observables,
+    Redux
 }

@@ -30,6 +30,10 @@ const links = [
     {
         to: '/observables',
         label: 'Observables'
+    },
+    {
+        to: '/redux',
+        label: 'Redux'
     }
 ]
 

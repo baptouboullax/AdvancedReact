@@ -14,7 +14,8 @@ import {
   HttpRequests,
   UseRef,
   UseReducer,
-  Observables
+  Observables,
+  Redux
 } from './pages/';
 
 const routes = [
@@ -52,6 +53,11 @@ const routes = [
     path: '/observables',
     exact: true,
     component: <Observables />
+  },
+  {
+    path: '/redux',
+    exact: true,
+    component: <Redux />
   },
   {
     path: '/',
