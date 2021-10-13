@@ -4,6 +4,8 @@ import { Home } from "./Home";
 import { Localization } from "./Localization";
 import { HttpRequests } from "./HttpRequests";
 import { UseRef } from "./UseRef";
+import { UseReducer } from "./UseReducer";
+import { Observables } from "./Observables";
 
 export {
     Home,
@@ -11,5 +13,7 @@ export {
     ClassVsFunctions,
     Localization,
     HttpRequests,
-    UseRef
+    UseRef,
+    UseReducer,
+    Observables
 }

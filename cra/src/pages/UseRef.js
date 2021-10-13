@@ -13,8 +13,15 @@ const vanillaTiltOptions = {
 export const UseRef = () => {
     const domRef = useRef(null);
 
+    // componentDidMount
     useEffect(() => {
-        VanillaTilt.init(domRef.current, vanillaTiltOptions);
+        const tiltRef = domRef.current;
+        VanillaTilt.init(tiltRef, vanillaTiltOptions);
+
+        // fonction exécutée lorsque le composant va se démonter (componentWillUnmount)
+        return () => {
+            tiltRef.vanillaTilt.destroy(tiltRef);
+        }
     }, []);
 
     return <>

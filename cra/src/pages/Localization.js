@@ -4,7 +4,8 @@ import En from '../translations/en.json';
 
 const locale = navigator.language;
 const translationEnum = {
-    "fr": Fr
+    "fr": Fr,
+    "en": En
 };
 
 export const Localization = () => <IntlProvider

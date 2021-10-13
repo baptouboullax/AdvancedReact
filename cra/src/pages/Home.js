@@ -1,6 +1,7 @@
 import {
     Link
 } from "react-router-dom";
+import Instance from '../instance';
 
 const links = [
     {
@@ -18,11 +19,19 @@ const links = [
     {
         to: '/use-ref',
         label: 'UseRef'
+    },
+    {
+        to: '/use-reducer',
+        label: 'Use Reducer'
+    },
+    {
+        to: '/observables',
+        label: 'Observables'
     }
 ]
 
 export const Home = () => <div>
-    <h1>React Avancé</h1>
+    <h1>{Instance.name}</h1>
     <div className="list-group">
         {links.map((link, index) => <Link key={'link-' + index} className="list-group-item list-group-item-action" to={link.to}>{link.label}</Link>)}
     </div>
