@@ -10,7 +10,10 @@ export const CustomMap = props => {
             });
 
             return <Marker position={country.latlng} key={index} icon={flagIcon}>
-                <Popup>{country.name.common}</Popup>
+                <Popup>
+                    {country.name.common} <br/>
+                    Pop. : {country.population}
+                </Popup>
             </Marker>
         }
     );

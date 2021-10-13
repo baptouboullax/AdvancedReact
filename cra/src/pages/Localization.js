@@ -1,5 +1,6 @@
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import Fr from '../translations/fr.json';
+import En from '../translations/en.json';
 
 const locale = navigator.language;
 const translationEnum = {
@@ -14,7 +15,13 @@ export const Localization = () => <IntlProvider
     <h1>Localization</h1>
     <FormattedMessage
         id="myMessage"
-        defaultMessage="Today is {ts, date, :::yyyyMMdd}"
+        defaultMessage="Today is {ts, date, :::yyyyMMdd}."
         values={{ ts: Date.now() }}
-/>
+    />
+    <br/>
+    <FormattedMessage
+        id="myMessage2"
+        defaultMessage="Yesterday, I ate an apple."
+    />
+
 </IntlProvider>;

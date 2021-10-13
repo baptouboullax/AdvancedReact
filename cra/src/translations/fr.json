@@ -1,3 +1,4 @@
 {
-    "myMessage": "Aujourd'hui, c'est le {ts, date, ===yyyyMMdd}"
+    "myMessage": "Aujourd'hui, c'est le {ts, date, ===yyyyMMdd}.",
+    "myMessage2": "Hier, j'ai mangé une pomme."
 }

@@ -11,35 +11,62 @@ import {
   Components,
   ClassVsFunctions,
   Localization,
-  HttpRequests
+  HttpRequests,
+  UseRef
 } from './pages/';
 
+const routes = [
+  {
+    path: '/http-requests',
+    exact: true,
+    component: <HttpRequests />
+  },
+  {
+    path: '/components',
+    exact: true,
+    component: <Components />
+  },
+  {
+    path: '/classvsfunctions',
+    exact: true,
+    component: <ClassVsFunctions />
+  },
+  {
+    path: '/localization',
+    exact: true,
+    component: <Localization />
+  },
+  {
+    path: '/use-ref',
+    exact: true,
+    component: <UseRef />
+  },
+  {
+    path: '/',
+    exact: false,
+    component: <Home />
+  }
+]
+
+const Routes = () => <Switch>
+  {
+    routes.map((route, index) =>
+      <Route path={route.path} exact={route.exact} key={index}>
+        {route.component}
+      </Route>
+    )
+  }
+</Switch>
 
 const BackButton = routeProps => (routeProps.location.pathname !== "/")
-  ? <div><NavLink className='btn btn-link' to="/">Home</NavLink></div>
+  ? <div className="pt-3"><NavLink className='btn btn-link' to="/">Home</NavLink></div>
   : null;
 
 const App = () => {
   return (
     <Router>
       <div className="container py-3">
-        <Switch>
-          <Route path='/http-requests'>
-            <HttpRequests />
-          </Route>
-          <Route path='/components'>
-            <Components />
-          </Route>
-          <Route path='/classvsfunctions'>
-            <ClassVsFunctions />
-          </Route>
-          <Route path='/localization'>
-            <Localization />
-          </Route>
-          <Route path='/'>
-            <Home />
-          </Route>
-        </Switch>
+        <Routes />
         <Route render={routeProps => <BackButton {...routeProps} />} />
       </div>
     </Router>
